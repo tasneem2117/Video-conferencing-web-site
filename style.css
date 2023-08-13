@@ -1,0 +1,264 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:'lato', sans-serif;
+}
+body{
+    width:100%;
+    padding:0;
+    background-color: white;
+    overflow: hidden;
+}
+body.active{
+padding-right: 25rem;
+}
+.chat{
+    position: fixed;
+    bottom: 10;
+    height:100%;
+width: 25rem;
+display:flex ;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 10px;
+padding: 30px 20px;
+z-index: 1000;
+
+    right: 0%;
+    background: #f5f2f2;
+    transition: 0.5s ease-in-out;
+}
+.chat.active{
+    right: 0%;
+}
+.chat h4{
+    color: #333;
+    font-size: 1.5em;
+}
+.chat.chatting{
+   display: flex;
+   flex-direction: column; 
+}
+.chat.messages{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+}
+.chat.messages img{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.chat.messages div{
+    background: #ffff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51, 51, 0.2);
+}
+.container{
+  
+    min-height:100%;
+    width: 100%;
+}
+.video{
+   /* padding-bottom: 1000px; */
+    position:relative;
+    display:flex;
+    height: 100%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+   
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:80%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:20px 20px;
+    z-index:10;
+
+}
+body.active header{
+    width: 100%;
+    justify-content: flex-start;
+}
+.logo{
+    font-size: 2em;
+    color:#333;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right:30px;
+}
+.info{
+    background:#f5f2f2;
+    padding:10px 20px;
+    width:100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    color:#555050;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons a{
+    height:40px;
+    width:40px;
+    background:#ffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size:1.4em;
+    margin-right: 10px;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51, 51, 0.2);
+}
+.icons a:hover{
+    background: #333;
+    color: white;
+}
+.videobox{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 20px;
+
+}
+.videobox .img{
+    width:100%;
+    height: 80%;
+    display: flex;
+justify-content: center;
+align-items: center;
+padding:20px;
+
+}
+.user{
+    padding-bottom: 150px;
+    position: relative;
+    height: 650px;
+    width:60%;
+    object-fit: cover;
+}
+.imgbox{
+    position: relative;
+    height: 88vh;
+    width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding-bottom:130px ;
+}
+.imgbox img{
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+    margin-block-end: 50px;
+    margin-inline-end: 20px;
+    /* display: flex; */
+}
+/* body active */
+.active .videobox{
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.active .videobox .img{
+    height: 90%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+align-items: center;
+padding: 20px;
+}
+.active .user{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.active .imgbox{
+    position: absolute;
+    top: 20;
+    right: 90;
+    height: 100%;
+    width: 70px;
+}
+.active .imgbox img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    margin: 5px 0;
+}
+
+.btns{
+    position:absolute;
+    bottom: 5;
+    left: 20;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-top: 600px;
+background: #f5f2f2;
+border-radius: 10px;
+padding: 20px;
+}
+.btns a{
+    height: 50px;
+    width:50px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffff;
+    font-size: 1.3em;
+    color: #333;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(51, 51, 51, 0.2);
+}
+.btns a:hover{
+    background: #333;
+    color: white;
+}
+.btns a.red{
+    color: #ffff;
+    background: #ee3232;
+}
+.btns a.red:hover{
+    color: #ffff;
+    background: #ee3232;
+}
+.btns a ion-icon{
+    
+    transition: 0.5s cubic-bezier(.5, 1.75, .75,1.25);
+}
+.btns a:hover ion-icon{
+    transform: rotate(360deg);
+}
